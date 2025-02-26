@@ -16,17 +16,51 @@ Author: doxifieq
     --primary-color: rgb(229, 229, 229);
 }
 
-body {
-    background-color: rgb(0, 0, 0);
-}
-
 h1, h2, h3, h4, h5, h6, p, a {
     font-family: "Open Sans", sans-serif;
-    color: var(--primary-color)
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0;
 }
 
+/* PRIMARY */
+
 .wrapper {
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(25, 25, 25);
     border-radius: 6px;
-    width: 90%
+    width: 100%
+}
+
+.muted {
+    color: rgb(110, 110, 110);
+    font-size: 14px;
+}
+
+/* STATS */
+
+.stats-grid {
+    margin: 0 auto 2.5em auto;
+    grid-template:
+        "one two three"
+        "four four four";
+    display: grid;
+    width: 95%;
+    gap: 2em;
+}
+
+.stats-grid-item {
+    background-color: rgb(40, 40, 40);
+    border-radius: 6px;
+}
+
+.stats-grid-item.active-incident {
+    grid-area: "one";
+}
+
+.stats-grid-item.total-incident {
+    grid-area: "two";
+}
+
+.stats-grid-item.latest-incident {
+    grid-area: "three";
 }
