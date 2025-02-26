@@ -114,15 +114,15 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .active-websites-item {
-    transition-property: margin, opacity;
     background-color: rgb(44, 44, 44);
-    transition: all 300ms;
+    transition: margin 300ms;
     border-radius: 6px;
     padding: 1em;
     margin: 1em;
 }
 
 .active-websites-item > .muted {
+    transition: opacity 300ms;
     opacity: 0;
 }
 
