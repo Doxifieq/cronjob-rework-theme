@@ -31,6 +31,10 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 /* PRIMARY */
 
+.page-title {
+    padding: 1em;
+}
+
 .muted {
     color: rgb(110, 110, 110);
     font-size: 14px;
@@ -51,6 +55,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 .stats-grid-item {
     background-color: rgb(40, 40, 40);
     border-radius: 6px;
+    padding: 1em;
 }
 
 .stats-grid-item.active-incident {
