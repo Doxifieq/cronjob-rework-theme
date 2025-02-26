@@ -57,19 +57,19 @@
             </div>
 
             <div class="active-websites">
-                <a class="active-websites-item">
+                <a class="active-websites-item" href="google">
                     <h3>Google</h3>
                     <p><span class="dot green"></span>Status Code: 200</p>
                     <p class="muted">0 total incidents</p>
                 </a>
 
-                <a class="active-websites-item">
+                <a class="active-websites-item" href="google">
                     <h3>Google</h3>
                     <p><span class="dot green"></span>Status Code: 200</p>
                     <p class="muted">0 total incidents</p>
                 </a>
 
-                <a class="active-websites-item">
+                <a class="active-websites-item" href="google">
                     <h3>Google</h3>
                     <p><span class="dot green"></span>Status Code: 200</p>
                     <p class="muted">0 total incidents</p>
