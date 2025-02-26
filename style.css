@@ -115,6 +115,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .active-websites-item {
     background-color: rgb(44, 44, 44);
+    transition: margin 300ms;
     border-radius: 6px;
     padding: 1em;
     margin: 1em;
