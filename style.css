@@ -123,6 +123,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .active-websites-item > .muted {
     transition: opacity 300ms;
+    max-height: 0;
     opacity: 0;
 }
 
@@ -136,5 +137,6 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .active-websites-item:hover > .muted {
+    max-height: 100%;
     opacity: 1;
 }
