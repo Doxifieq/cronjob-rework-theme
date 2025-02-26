@@ -60,19 +60,21 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .stats-grid-item.active-incident {
-    grid-area: "one";
+    grid-area: one;
 }
 
 .stats-grid-item.total-incident {
-    grid-area: "two";
+    grid-area: two;
 }
 
 .stats-grid-item.latest-incident {
-    grid-area: "three";
+    grid-area: three;
 }
 
 .stats-grid-item.uptime {
-    grid-area: "four";
+    flex-direction: row;
+    grid-area: four;
+    display: flex;
 }
 
 .stats-grid-item.uptime div:not(:last-child) {
