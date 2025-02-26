@@ -51,8 +51,16 @@ h1, h2, h3, h4, h5, h6, p, a {
     width: 15px;
 }
 
+.dot.red {
+    background-color: red;
+}
+
 .dot.green {
     background-color: lime;
+}
+
+.dot.yellow {
+    background-color: yellow;
 }
 
 /* STATS */
