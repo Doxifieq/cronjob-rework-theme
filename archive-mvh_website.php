@@ -60,12 +60,13 @@
                         while (have_posts()) {
                             the_post();
 
+                            $website_permalink = get_the_permalink();
                             $website_title = get_the_title();
                             $website_url = get_field('website');
 
                             echo '
-                                <a class="active-websites-item" href="' . get_the_permalink() . '">
-                                    <h3>Google</h3>
+                                <a class="active-websites-item" href="' . $website_permalink . '">
+                                    <h3>' . $website_title . '</h3>
                                     <p><span class="dot green"></span>Status Code: 200</p>
                                     <p class="muted">' . $website_url . '</p>
                                 </a>
