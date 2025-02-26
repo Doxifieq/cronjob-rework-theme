@@ -14,6 +14,7 @@ Author: doxifieq
 
 :root {
     --primary-color: rgb(229, 229, 229);
+    --primary-bg-color: rgb(35, 35, 35);
     --border-color: rgb(55, 55, 55)
 }
 
@@ -70,7 +71,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .stats-grid-item {
-    background-color: rgb(35, 35, 35);
+    background-color: var(--primary-bg-color);
     border-radius: 6px;
     padding: 1em;
 }
@@ -101,5 +102,6 @@ h1, h2, h3, h4, h5, h6, p, a {
 /* ACTIVE WEBSITES */
 
 .active-websites {
+    background-color: var(--primary-bg-color);
     display: flex;
 }
