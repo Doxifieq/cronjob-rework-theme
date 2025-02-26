@@ -122,8 +122,8 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .active-websites-item > .muted {
-    transition: visibility 300ms, opacity 300ms;
-    visibility: hidden;
+    transition: max-height 150ms, opacity 300ms;
+    max-height: 0;
     opacity: 0;
 }
 
@@ -137,6 +137,6 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .active-websites-item:hover > .muted {
-    visibility: visible;
+    max-height: 100%;
     opacity: 1;
 }
