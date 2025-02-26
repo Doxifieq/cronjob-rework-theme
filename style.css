@@ -121,11 +121,19 @@ h1, h2, h3, h4, h5, h6, p, a {
     margin: 1em;
 }
 
+.active-websites-item.muted {
+    opacity: 1;
+}
+
 .active-websites-item h3 {
     margin: 0 0 6px 0;
 }
 
 .active-websites-item:hover {
     background-color: rgb(50, 50, 50);
-    margin: 0.78em;
+    margin: 0.75em;
+}
+
+.active-websites-item:hover.muted {
+    opacity: 1;
 }
