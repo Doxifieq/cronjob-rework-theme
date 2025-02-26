@@ -10,7 +10,7 @@
     <body <?php body_class(); ?>>
         <?php wp_body_open(); ?>
 
-        <h1 class="page-title">Index</h1>
+        <h1>Index</h1>
 
         <a href="websites">Websites</a>
 
