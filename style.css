@@ -72,9 +72,10 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .stats-grid-item.uptime {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-area: four;
-    display: flex;
+    display: grid;
+    gap: 1.5em;
 }
 
 .stats-grid-item.uptime div:not(:last-child) {
