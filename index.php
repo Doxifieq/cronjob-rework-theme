@@ -10,9 +10,7 @@
     <body <?php body_class(); ?>>
         <?php wp_body_open(); ?>
 
-        <div class="wrapper">
-            <h1>Websites</h1>
-        </div>
+        <a href="websites">Websites</a>
 
         <?php wp_footer(); ?>
     </body>
