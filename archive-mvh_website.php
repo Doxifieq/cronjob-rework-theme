@@ -72,7 +72,7 @@
                             echo '
                                 <a class="active-websites-item" href="' . $website_permalink . '">
                                     <h3>' . $website_title . '</h3>
-                                    <p><span class="dot ' . $status_code_data[0] . '"></span>' . $status_code_data[1] . '</p>
+                                    <p><span class="dot ' . $status_code_data['color'] . '"></span>' . $status_code_data['status'] . '</p>
                                     <p class="muted">' . $website_url . '</p>
                                     <p class="muted">Status Code ' . $website_status_code . '</p>
                                 </a>
