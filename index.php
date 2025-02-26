@@ -10,9 +10,11 @@
     <body <?php body_class(); ?>>
         <?php wp_body_open(); ?>
 
-        <h1 class="page-title">Index</h1>
+        <div class="wrapper">
+            <h1 class="page-title">Index</h1>
 
-        <a href="websites">Websites</a>
+            <a href="websites">Websites</a>
+        </div>
 
         <?php wp_footer(); ?>
     </body>
