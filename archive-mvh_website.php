@@ -62,12 +62,13 @@
 
                             $website_permalink = get_the_permalink();
                             $website_title = get_the_title();
+                            $website_statuscode = get_post_meta(get_the_ID(), 'status_code', true);
                             $website_url = get_field('website');
 
                             echo '
                                 <a class="active-websites-item" href="' . $website_permalink . '">
                                     <h3>' . $website_title . '</h3>
-                                    <p><span class="dot green"></span>Status Code: 200</p>
+                                    <p><span class="dot green"></span>Status Code: ' . $website_statuscode . '</p>
                                     <p class="muted">' . $website_url . '</p>
                                 </a>
                             ';
