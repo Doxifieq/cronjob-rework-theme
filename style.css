@@ -16,6 +16,12 @@ Author: doxifieq
     --primary-color: rgb(229, 229, 229);
 }
 
+body {
+    background-color: rgb(25, 25, 25);
+    padding: 1em;
+    margin: 0;
+}
+
 h1, h2, h3, h4, h5, h6, p, a {
     font-family: "Open Sans", sans-serif;
     color: var(--primary-color);
@@ -24,12 +30,6 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 /* PRIMARY */
-
-.wrapper {
-    background-color: rgb(25, 25, 25);
-    border-radius: 6px;
-    width: 100%
-}
 
 .muted {
     color: rgb(110, 110, 110);
