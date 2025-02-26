@@ -71,7 +71,6 @@ h1, h2, h3, h4, h5, h6, p, a {
         "one two three"
         "four four four";
     display: grid;
-    width: 95%;
     gap: 2em;
 }
 
@@ -112,7 +111,6 @@ h1, h2, h3, h4, h5, h6, p, a {
     border-radius: 6px;
     display: flex;
     margin: auto;
-    width: 95%;
 }
 
 .active-websites-item {

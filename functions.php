@@ -1,9 +1,9 @@
 <?php
 
-function mvh_get_status_code_color($status_code) {
+function mvh_get_status_code_data($status_code) {
     switch ($status_code) {
         case '200':
-            return 'green';
+            return ['color' => 'green', 'status' => 'Up'];
 
         case NULL:
         case '0':
@@ -14,10 +14,10 @@ function mvh_get_status_code_color($status_code) {
         case '502':
         case '503':
         case '504':
-            return 'red';
+            return ['color' => 'red', 'status' => 'Down'];
 
         default:
-            return 'yellow';
+            return ['color' => 'yellow', 'status' => 'Unknown'];
     }
 }
 

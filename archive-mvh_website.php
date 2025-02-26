@@ -65,12 +65,12 @@
                             $website_status_code = get_post_meta(get_the_ID(), 'status_code', true);
                             $website_url = get_field('website');
 
-                            $status_code_color = mvh_get_status_code_color($website_status_code);
+                            $status_code_data = mvh_get_status_code_data($website_status_code);
 
                             echo '
                                 <a class="active-websites-item" href="' . $website_permalink . '">
                                     <h3>' . $website_title . '</h3>
-                                    <p><span class="dot ' . $status_code_color . '"></span>Status Code: ' . $website_status_code . '</p>
+                                    <p><span class="dot ' . $status_code_data['color'] . '"></span>Status Code: ' . $website_status_code . '</p>
                                     <p class="muted">' . $website_url . '</p>
                                 </a>
                             ';
