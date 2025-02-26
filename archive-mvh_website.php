@@ -64,16 +64,17 @@
 
                             $website_permalink = get_the_permalink();
                             $website_title = get_the_title();
-                            $website_status_code = $status_code_meta ? $status_code_meta : 'No data';
                             $website_url = get_field('website');
+                            $website_status_code = $status_code_meta ? $status_code_meta : 'No data';
 
                             $status_code_data = mvh_get_status_code_data($status_code_meta);
 
                             echo '
                                 <a class="active-websites-item" href="' . $website_permalink . '">
                                     <h3>' . $website_title . '</h3>
-                                    <p><span class="dot ' . $status_code_data['color'] . '"></span>Status Code: ' . $website_status_code . '</p>
+                                    <p><span class="dot ' . $status_code_data[0] . '"></span>' . $status_code_data[1] . '</p>
                                     <p class="muted">' . $website_url . '</p>
+                                    <p class="muted">Status Code ' . $website_status_code . '</p>
                                 </a>
                             ';
                         }

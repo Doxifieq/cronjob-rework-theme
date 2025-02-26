@@ -3,7 +3,7 @@
 function mvh_get_status_code_data($status_code) {
     switch ($status_code) {
         case '200':
-            return ['color' => 'green', 'status' => 'Up'];
+            return ['color' => 'green', 'status' => 'Online'];
 
         case '0':
         case '404':
@@ -13,7 +13,7 @@ function mvh_get_status_code_data($status_code) {
         case '502':
         case '503':
         case '504':
-            return ['color' => 'red', 'status' => 'Down'];
+            return ['color' => 'red', 'status' => 'Offline'];
 
         default:
             return ['color' => 'yellow', 'status' => 'Unknown'];
