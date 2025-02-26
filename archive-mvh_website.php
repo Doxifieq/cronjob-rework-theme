@@ -66,9 +66,8 @@
                             echo '
                                 <a class="active-websites-item" href="' . get_the_permalink() . '">
                                     <h3>Google</h3>
-                                    <p class="muted">' . $website_url . '</p>
                                     <p><span class="dot green"></span>Status Code: 200</p>
-                                    <p class="muted">0 total incidents</p>
+                                    <p class="muted">' . $website_url . '</p>
                                 </a>
                             ';
                         }
