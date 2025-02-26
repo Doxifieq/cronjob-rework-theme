@@ -104,4 +104,10 @@ h1, h2, h3, h4, h5, h6, p, a {
 .active-websites {
     background-color: var(--primary-bg-color);
     display: flex;
+    margin: auto;
+    width: 95%;
+}
+
+.active-websites-item {
+    padding: 1em
 }
