@@ -14,6 +14,7 @@ Author: doxifieq
 
 :root {
     --primary-color: rgb(229, 229, 229);
+    --border-color: rgb(55, 55, 55)
 }
 
 body {
@@ -68,4 +69,12 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .stats-grid-item.latest-incident {
     grid-area: "three";
+}
+
+.stats-grid-item.uptime {
+    grid-area: "four";
+}
+
+.stats-grid-item.uptime div:not(:last-child) {
+    border-right: 1px solid var(--border-color);
 }

@@ -27,6 +27,32 @@
                 <p>Latest Incident</p>
                 <h3>None</h3>
             </div>
+
+            <div class="stats-grid-item uptime">
+                <div>
+                    <p>Last 24 hours</p>
+                    <h3>100.00%</h3>
+                    <p class="muted">0 incidents</p>
+                </div>
+
+                <div>
+                    <p>Last 7 days</p>
+                    <h3>100.00%</h3>
+                    <p class="muted">0 incidents</p>
+                </div>
+
+                <div>
+                    <p>Last 30 days</p>
+                    <h3>100.00%</h3>
+                    <p class="muted">0 incidents</p>
+                </div>
+
+                <div>
+                    <p>Last 365 days</p>
+                    <h3>100.00%</h3>
+                    <p class="muted">0 incidents</p>
+                </div>
+            </div>
         </div>
 
         <?php wp_footer(); ?>
