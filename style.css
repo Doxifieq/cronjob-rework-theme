@@ -112,6 +112,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .active-websites-item {
     background-color: rgb(50, 50, 50);
+    border-radius: 6px;
     padding: 1em;
     margin: 1em;
 }
