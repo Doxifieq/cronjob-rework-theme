@@ -11,8 +11,6 @@
         <?php wp_body_open(); ?>
 
         <div class="wrapper">
-            <h1 class="page-title">Index</h1>
-
             <a href="websites">Websites</a>
         </div>
 

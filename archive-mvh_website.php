@@ -11,8 +11,6 @@
         <?php wp_body_open(); ?>
 
         <div class="wrapper">
-            <h1 class="page-title">Websites</h1>
-
             <div class="stats-grid">
                 <div class="stats-grid-item active-incident">
                     <p>Active Incidents</p>
