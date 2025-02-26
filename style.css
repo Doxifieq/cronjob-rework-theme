@@ -117,3 +117,7 @@ h1, h2, h3, h4, h5, h6, p, a {
     padding: 1em;
     margin: 1em;
 }
+
+.active-websites-item:hover {
+    background-color: rgb(50, 50, 50);
+}
