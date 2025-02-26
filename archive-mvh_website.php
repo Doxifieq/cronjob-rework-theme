@@ -60,12 +60,14 @@
                         while (have_posts()) {
                             the_post();
 
+                            $status_code_meta = get_post_meta(get_the_ID(), 'status_code', true);
+
                             $website_permalink = get_the_permalink();
                             $website_title = get_the_title();
-                            $website_status_code = get_post_meta(get_the_ID(), 'status_code', true);
+                            $website_status_code = $status_code_meta ? $status_code_meta : 'No data';
                             $website_url = get_field('website');
 
-                            $status_code_data = mvh_get_status_code_data($website_status_code);
+                            $status_code_data = mvh_get_status_code_data($status_code_meta);
 
                             echo '
                                 <a class="active-websites-item" href="' . $website_permalink . '">
