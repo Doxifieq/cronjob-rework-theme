@@ -45,6 +45,18 @@ h1, h2, h3, h4, h5, h6, p, a {
     font-size: 14px;
 }
 
+.dot {
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 8px;
+    height: 15px;
+    width: 15px;
+}
+
+.dot.green {
+    background-color: lime;
+}
+
 /* STATS */
 
 .stats-grid {
@@ -58,7 +70,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .stats-grid-item {
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(35, 35, 35);
     border-radius: 6px;
     padding: 1em;
 }
@@ -84,4 +96,10 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .stats-grid-item.uptime div:not(:last-child) {
     border-right: 1px solid var(--border-color);
+}
+
+/* ACTIVE WEBSITES */
+
+.active-websites {
+    display: flex;
 }
