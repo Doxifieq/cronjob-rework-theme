@@ -2,10 +2,18 @@
     $incidents = 0;
     $incident = NULL;
 
+    $uptime_24h_count = 0;
     $uptime_24h = 100; //1440
+
+    $uptime_7d_count = 0;
     $uptime_7d = 100;
+
+    $uptime_30d_count = 0;
     $uptime_30d = 100;
+
+    $uptime_365d_count = 0;
     $uptime_365d = 100;
+
 
     if (have_posts()) {
         while (have_posts()) {
@@ -26,12 +34,14 @@
                     $time = substr($key, 12);
 
                     if ($time > strtotime('-24 hour')) {
-                        $uptime_24h -= 1 / 1440 * 100;
+                        $uptime_24h_count++;
                     }
                 }
             }
         }
     }
+
+    $uptime_24h -= $uptime_24h_count / 1440 * 100;
 ?>
 
 <!DOCTYPE HTML>
@@ -67,7 +77,7 @@
                     <div>
                         <p>Last 24 hours</p>
                         <h3><?php echo "$uptime_24h%"; ?></h3>
-                        <p class="muted">0 incidents</p>
+                        <p class="muted"><?php echo "$uptime_24h_count incidents"; ?></p>
                     </div>
 
                     <div>
