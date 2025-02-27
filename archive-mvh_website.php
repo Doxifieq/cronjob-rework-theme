@@ -35,7 +35,7 @@
         }
     }
 
-    $uptime_24h = 1440 / $uptime_24_count * 100
+    $uptime_24h = $uptime_24_count / 1440 * 100
 ?>
 
 <!DOCTYPE HTML>
@@ -71,7 +71,7 @@
                     <div>
                         <p>Last 24 hours</p>
                         <h3><?php echo "$uptime_24h%"; ?></h3>
-                        <p class="muted"><?php echo "$uptime_24_count"; ?></p>
+                        <p class="muted"><?php echo "$uptime_24_count incidents"; ?></p>
                     </div>
 
                     <div>
