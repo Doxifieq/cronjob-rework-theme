@@ -74,12 +74,12 @@
             <div class="stats-grid">
                 <div class="stats-grid-item active-incident">
                     <p>Active Incidents</p>
-                    <h3><?php echo $incidents ?></h3>
+                    <h3><?php echo $active_incidents ?></h3>
                 </div>
 
                 <div class="stats-grid-item lifetime-incident">
                     <p>Lifetime Incidents</p>
-                    <h3><?php echo $incidents ?></h3>
+                    <h3><?php echo $lifetime_incidents ?></h3>
                 </div>
 
                 <div class="stats-grid-item latest-incident">
