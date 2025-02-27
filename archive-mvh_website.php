@@ -35,7 +35,7 @@
         }
     }
 
-    $uptime_24h = $uptime_24_count / 1440 * 100
+    $uptime_24h = 1440 / $uptime_24_count * 100
 ?>
 
 <!DOCTYPE HTML>
