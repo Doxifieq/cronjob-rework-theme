@@ -21,7 +21,7 @@
                         
                         echo '
                             <h2>Viewing history for ' . $website_title . '</h2>
-                            <p class="muted">' . $website_url . '</p>
+                            <a class="muted" href="' . $website_url . '">' . $website_url . '</a>
                         ';
                     }
                 }
