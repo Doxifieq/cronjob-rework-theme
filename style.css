@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 .active-websites-item {
     background-color: rgb(44, 44, 44);
     justify-content: space-between;
-    transition: margin 300ms;
+    transition: margin 300ms, background-color 300ms;
     border-radius: 6px;
     display: flex;
     padding: 1em;
@@ -154,7 +154,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 .history-item {
     background-color: rgb(44, 44, 44);
     justify-content: space-between;
-    transition: margin 300ms;
+    transition: margin 300ms, background-color 300ms;
     border-radius: 6px;
     display: flex;
     padding: 1em;
