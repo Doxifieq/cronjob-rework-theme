@@ -41,7 +41,7 @@
         }
     }
 
-    $uptime_24h -= floor($uptime_24h_count / 1440 * 100);
+    $uptime_24h -= round($uptime_24h_count / 1440 * 100, 2);
 ?>
 
 <!DOCTYPE HTML>
