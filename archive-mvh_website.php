@@ -27,7 +27,7 @@
                 } elseif (str_contains($key, 'status_code_')) {
                     $time = substr($key, 12);
 
-                    if (strtotime($date) > strtotime('-24 hour')) {
+                    if ($time > strtotime('-24 hour')) {
                         $uptime_24_count++;
                     }
                 }
