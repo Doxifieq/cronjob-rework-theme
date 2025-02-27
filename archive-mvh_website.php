@@ -41,10 +41,17 @@
         }
     }
 
-    $uptime_24h -= round($uptime_24h_count / 1440 * 100, 6);
-    $uptime_7d -= round($uptime_7d_count / 10080 * 100, 6);
-    $uptime_30d -= round($uptime_30d_count / 43200 * 100, 6);
-    $uptime_365d -= round($uptime_365d_count / 525600 * 100, 6);
+    /*
+        24h = 1440
+        7d = 10080
+        30d = 43200
+        365d = 525600
+    */
+
+    $uptime_24h -= round($uptime_24h_count / 7200 * 100, 6);
+    $uptime_7d -= round($uptime_7d_count / 50400 * 100, 6);
+    $uptime_30d -= round($uptime_30d_count / 216000 * 100, 6);
+    $uptime_365d -= round($uptime_365d_count / 2628000 * 100, 6);
 ?>
 
 <!DOCTYPE HTML>
