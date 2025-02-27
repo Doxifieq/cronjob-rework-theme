@@ -16,7 +16,7 @@
                     while (have_posts()) {
                         the_post();
 
-                        echo '<h1>Viewing history for ' . get_the_title() . '</h1>';
+                        echo '<h2>Viewing history for ' . get_the_title() . '</h2>';
                     }
                 }
             ?>
