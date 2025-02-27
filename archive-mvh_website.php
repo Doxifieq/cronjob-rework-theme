@@ -3,8 +3,6 @@
     $incident = NULL;
 
     $uptime_24h = 100; //1440
-    $uptime_24_count = 0;
-
     $uptime_7d = 100;
     $uptime_30d = 100;
     $uptime_365d = 100;
@@ -28,14 +26,12 @@
                     $time = substr($key, 12);
 
                     if ($time > strtotime('-24 hour')) {
-                        $uptime_24_count++;
+                        $uptime_24h -= 1 / 1440 * 100;
                     }
                 }
             }
         }
     }
-
-    $uptime_24h = $uptime_24_count / 1440 * 100
 ?>
 
 <!DOCTYPE HTML>
