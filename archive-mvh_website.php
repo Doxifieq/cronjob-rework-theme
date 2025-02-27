@@ -1,5 +1,6 @@
 <?php
-    $incidents = 0;
+    $active_incidents = 0;
+    $lifetime_incidents = 0;
     $incident = NULL;
 
     $uptime_24h_count = 0;
@@ -25,12 +26,15 @@
                 if ($key == 'status_code') {
                     $status_code_data = mvh_get_status_code_data($value[0]);
 
-                    if ($status_code_data['status'] == 'Offline') $incident = get_the_title();
+                    if ($status_code_data['status'] == 'Offline') {
+                        $incident = get_the_title();
+                        $active_incidents++;
+                    }
 
                 } elseif (str_contains($key, 'status_code_')) {
                     $time = substr($key, 12);
 
-                    $incidents++;
+                    $lifetime_incidents++;
 
                     if ($time > strtotime('-24 hour')) $uptime_24h_count++;
                     if ($time > strtotime('-7 day')) $uptime_7d_count++;
