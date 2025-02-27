@@ -12,8 +12,8 @@
                 $status_code_data = mvh_get_status_code_data($value[0]);
 
                 if ($status_code_data['status'] == 'Offline') {
-                    $incidents++;
-                    $incident = get_the_title();
+                    $GLOBALS['incidents']++;
+                    $GLOBALS['incident'] = get_the_title();
                 }
             }
         }
@@ -36,17 +36,17 @@
             <div class="stats-grid">
                 <div class="stats-grid-item active-incident">
                     <p>Active Incidents</p>
-                    <h3><?php $incidents; ?></h3>
+                    <h3><?php $GLOBALS['incidents']; ?></h3>
                 </div>
 
                 <div class="stats-grid-item total-incident">
                     <p>Total Incidents</p>
-                    <h3><?php $incidents; ?></h3>
+                    <h3><?php $GLOBALS['incidents']; ?></h3>
                 </div>
 
                 <div class="stats-grid-item latest-incident">
                     <p>Latest Incident</p>
-                    <h3><?php ($incident ? $incident : 'None'); ?></h3>
+                    <h3><?php ($GLOBALS['incident'] ? $GLOBALS['incident'] : 'None'); ?></h3>
                 </div>
 
                 <div class="stats-grid-item uptime">
