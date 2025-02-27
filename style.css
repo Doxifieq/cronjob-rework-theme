@@ -140,3 +140,27 @@ h1, h2, h3, h4, h5, h6, p, a {
 .active-websites-item:hover .muted {
     opacity: 1;
 }
+
+/* HISTORY */
+
+.history {
+    background-color: var(--primary-bg-color);
+    flex-direction: column;
+    border-radius: 6px;
+    display: flex;
+    margin: auto;
+}
+
+.history-item {
+    background-color: rgb(44, 44, 44);
+    justify-content: space-between;
+    transition: margin 300ms;
+    border-radius: 6px;
+    display: flex;
+    padding: 1em;
+    margin: 1em;
+}
+
+.history-item:hover {
+    background-color: rgb(50, 50, 50);
+}

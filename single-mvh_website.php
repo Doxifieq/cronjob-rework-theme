@@ -16,7 +16,24 @@
                     while (have_posts()) {
                         the_post();
 
-                        echo '<h2>Viewing history for ' . get_the_title() . '</h2>';
+                        $status_code_meta = get_post_meta(get_the_ID(), 'status_code', true);
+
+                        $website_title = get_the_title();
+                        
+                        $status_code_data = mvh_get_status_code_data($status_code_meta);
+
+                        echo '
+                            <h2>Viewing history for ' . $website_title . '</h2>
+
+                            <div class="history">
+                                <div class="history-item">
+                                    <div>
+                                        <h3>' . $website_title . '</h3>
+                                        <p><span class="dot ' . $status_code_data['color'] . '"></span>' . $status_code_data['status'] . '</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ';
                     }
                 }
             ?>
