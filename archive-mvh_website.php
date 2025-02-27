@@ -35,6 +35,8 @@
 
                     if ($time > strtotime('-24 hour')) $uptime_24h_count++;
                     if ($time > strtotime('-7 day')) $uptime_7d_count++;
+                    if ($time > strtotime('-30 day')) $uptime_30d_count++;
+                    if ($time > strtotime('-365 day')) $uptime_365d_count++;
                 }
             }
         }
@@ -89,13 +91,13 @@
                     <div>
                         <p>Last 30 days</p>
                         <h3><?php echo "$uptime_30d%"; ?></h3>
-                        <p class="muted">0 incidents</p>
+                        <p class="muted"><?php echo "$uptime_30d_count incidents"; ?></p>
                     </div>
 
                     <div>
                         <p>Last 365 days</p>
                         <h3><?php echo "$uptime_365d%"; ?></h3>
-                        <p class="muted">0 incidents</p>
+                        <p class="muted"><?php echo "$uptime_365d_count incidents"; ?></p>
                     </div>
                 </div>
             </div>
