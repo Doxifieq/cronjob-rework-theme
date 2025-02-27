@@ -67,7 +67,7 @@
                     <div>
                         <p>Last 24 hours</p>
                         <h3><?php echo "$uptime_24h%"; ?></h3>
-                        <p class="muted"><?php echo "$uptime_24_count incidents"; ?></p>
+                        <p class="muted">0 incidents</p>
                     </div>
 
                     <div>
