@@ -161,6 +161,16 @@ h1, h2, h3, h4, h5, h6, p, a {
     margin: 1em;
 }
 
+.history-item .muted {
+    transition: opacity 300ms;
+    text-align: right;
+    opacity: 0;
+}
+
 .history-item:hover {
     background-color: rgb(50, 50, 50);
+}
+
+.history-item:hover .muted {
+    opacity: 1;
 }

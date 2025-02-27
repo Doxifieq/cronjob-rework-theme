@@ -11,32 +11,53 @@
         <?php wp_body_open(); ?>
 
         <div class="wrapper">
-            <?php 
+            <?php
                 if (have_posts()) {
                     while (have_posts()) {
                         the_post();
 
-                        $status_code_meta = get_post_meta(get_the_ID(), 'status_code', true);
-
                         $website_title = get_the_title();
+                        $website_url = get_field('website');
                         
-                        $status_code_data = mvh_get_status_code_data($status_code_meta);
-
                         echo '
                             <h2>Viewing history for ' . $website_title . '</h2>
-
-                            <div class="history">
-                                <div class="history-item">
-                                    <div>
-                                        <h3>' . $website_title . '</h3>
-                                        <p><span class="dot ' . $status_code_data['color'] . '"></span>' . $status_code_data['status'] . '</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <p class="muted">' . $website_url . '</p>
                         ';
                     }
                 }
             ?>
+
+            <div class="history">
+                <?php
+                    if (have_posts()) {
+                        while (have_posts()) {
+                            the_post();
+
+                            $post_meta = get_post_meta(get_the_ID());
+
+                            foreach (array_reverse($post_meta, true) as $key => $value) {
+                                if (str_contains($key, 'status_code_')) {
+                                    $time = substr($key, 12);
+
+                                    $date = date('Y-m-d H:i:s', $time);
+
+                                    echo '
+                                        <div class="history-item">
+                                            <div>
+                                                <h3>' . $date . '</h3>
+                                            </div>
+
+                                            <div>
+                                                <p class="muted">Status Code 0</p>
+                                            </div>
+                                        </div>
+                                    ';
+                                }
+                            }
+                        }
+                    }
+                ?>
+            </div>
         </div>
 
         <?php wp_footer(); ?>
