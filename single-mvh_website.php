@@ -10,6 +10,18 @@
     <body <?php body_class(); ?>>
         <?php wp_body_open(); ?>
 
+        <div class="wrapper">
+            <?php 
+                if (have_posts()) {
+                    while (have_posts()) {
+                        the_post();
+
+                        echo '<h1>Viewing history for ' . get_the_title() . '</h1>';
+                    }
+                }
+            ?>
+        </div>
+
         <?php wp_footer(); ?>
     </body>
 </html>
