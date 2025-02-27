@@ -1,3 +1,25 @@
+<?php
+    $incidents = 0;
+    $incident = NULL;
+
+    if (have_posts()) {
+        while (have_posts()) {
+            the_post();
+
+            $post_meta = get_post_meta(get_the_ID());
+
+            foreach ($post_meta as $key => $value) {
+                $status_code_data = mvh_get_status_code_data($value[0]);
+
+                if ($status_code_data['status'] == 'Offline') {
+                    $incidents++;
+                    $incident = get_the_title();
+                }
+            }
+        }
+    }
+?>
+
 <!DOCTYPE HTML>
 <html <?php language_attributes(); ?>>
     <head>
@@ -14,17 +36,17 @@
             <div class="stats-grid">
                 <div class="stats-grid-item active-incident">
                     <p>Active Incidents</p>
-                    <h3>0</h3>
+                    <h3><?php $incidents; ?></h3>
                 </div>
 
                 <div class="stats-grid-item total-incident">
                     <p>Total Incidents</p>
-                    <h3>0</h3>
+                    <h3><?php $incidents; ?></h3>
                 </div>
 
                 <div class="stats-grid-item latest-incident">
                     <p>Latest Incident</p>
-                    <h3>None</h3>
+                    <h3><?php ($incident ? $incident : 'None'); ?></h3>
                 </div>
 
                 <div class="stats-grid-item uptime">
