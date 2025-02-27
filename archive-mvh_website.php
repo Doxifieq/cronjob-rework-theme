@@ -33,7 +33,10 @@
                 } elseif (str_contains($key, 'status_code_')) {
                     $time = substr($key, 12);
 
-                    if ($time > strtotime('-24 hour')) {
+                    if ($time > strtotime('7 day')) {
+                        $uptime_7d_count++; continue;
+
+                    } elseif ($time > strtotime('24 hour')) {
                         $uptime_24h_count++;
                     }
                 }
@@ -42,6 +45,7 @@
     }
 
     $uptime_24h -= round($uptime_24h_count / 1440 * 100, 2);
+    $uptime_7d -= round($uptime_7d_count / 10080 * 100, 2);
 ?>
 
 <!DOCTYPE HTML>
@@ -83,7 +87,7 @@
                     <div>
                         <p>Last 7 days</p>
                         <h3><?php echo "$uptime_7d%"; ?></h3>
-                        <p class="muted">0 incidents</p>
+                        <p class="muted"><?php echo "$uptime_7d_count incidents"; ?></p>
                     </div>
 
                     <div>
