@@ -44,6 +44,8 @@
 
     $uptime_24h -= round($uptime_24h_count / 1440 * 100, 2);
     $uptime_7d -= round($uptime_7d_count / 10080 * 100, 2);
+    $uptime_30d -= round($uptime_30d_count / 43200 * 100, 2);
+    $uptime_365d -= round($uptime_365d_count / 525600 * 100, 2);
 ?>
 
 <!DOCTYPE HTML>
