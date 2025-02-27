@@ -36,23 +36,21 @@
                             $post_meta = get_post_meta(get_the_ID());
 
                             foreach (array_reverse($post_meta, true) as $key => $value) {
-                                if (str_contains($key, 'status_code_')) {
-                                    $time = substr($key, 12);
+                                if (!str_contains($key, 'status_code_')) continue;
 
-                                    $date = date('Y-m-d H:i:s', $time);
+                                $date = date('Y-m-d H:i:s', substr($key, 12));
 
-                                    echo '
-                                        <div class="history-item">
-                                            <div>
-                                                <h3>' . $date . '</h3>
-                                            </div>
-
-                                            <div>
-                                                <p class="muted">Status Code 0</p>
-                                            </div>
+                                echo '
+                                    <div class="history-item">
+                                        <div>
+                                            <h3>' . $date . '</h3>
                                         </div>
-                                    ';
-                                }
+
+                                        <div>
+                                            <p class="muted">Status Code 0</p>
+                                        </div>
+                                    </div>
+                                ';
                             }
                         }
                     }

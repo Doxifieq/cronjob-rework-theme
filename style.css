@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5, h6, p, a {
     grid-area: one;
 }
 
-.stats-grid-item.total-incident {
+.stats-grid-item.lifetime-incident {
     grid-area: two;
 }
 

@@ -9,6 +9,8 @@
             $post_meta = get_post_meta(get_the_ID());
 
             foreach ($post_meta as $key => $value) {
+                if (!$key == 'status_code') continue;
+
                 $status_code_data = mvh_get_status_code_data($value[0]);
 
                 if ($status_code_data['status'] == 'Offline') {
@@ -39,8 +41,8 @@
                     <h3><?php echo $incidents ?></h3>
                 </div>
 
-                <div class="stats-grid-item total-incident">
-                    <p>Total Incidents</p>
+                <div class="stats-grid-item lifetime-incident">
+                    <p>Lifetime Incidents</p>
                     <h3><?php echo $incidents ?></h3>
                 </div>
 
