@@ -2,6 +2,13 @@
     $incidents = 0;
     $incident = NULL;
 
+    $uptime_24h = 100; //1440
+    $uptime_24_count = 0;
+
+    $uptime_7d = 100;
+    $uptime_30d = 100;
+    $uptime_365d = 100;
+
     if (have_posts()) {
         while (have_posts()) {
             the_post();
@@ -9,17 +16,26 @@
             $post_meta = get_post_meta(get_the_ID());
 
             foreach ($post_meta as $key => $value) {
-                if (!$key == 'status_code') continue;
+                if ($key == 'status_code') {
+                    $status_code_data = mvh_get_status_code_data($value[0]);
 
-                $status_code_data = mvh_get_status_code_data($value[0]);
+                    if ($status_code_data['status'] == 'Offline') {
+                        $incidents++;
+                        $incident = get_the_title();
+                    }
 
-                if ($status_code_data['status'] == 'Offline') {
-                    $incidents++;
-                    $incident = get_the_title();
+                } elseif (str_contains($key, 'status_code_')) {
+                    $time = substr($key, 12);
+
+                    if (strtotime($date) > strtotime('-24 hour')) {
+                        $uptime_24_count++;
+                    }
                 }
             }
         }
     }
+
+    $uptime_24h = $uptime_24_count / 1440 * 100
 ?>
 
 <!DOCTYPE HTML>
@@ -54,25 +70,25 @@
                 <div class="stats-grid-item uptime">
                     <div>
                         <p>Last 24 hours</p>
-                        <h3>100.00%</h3>
+                        <h3><?php echo "$uptime_24h%"; ?></h3>
                         <p class="muted">0 incidents</p>
                     </div>
 
                     <div>
                         <p>Last 7 days</p>
-                        <h3>100.00%</h3>
+                        <h3><?php echo "$uptime_7d%"; ?></h3>
                         <p class="muted">0 incidents</p>
                     </div>
 
                     <div>
                         <p>Last 30 days</p>
-                        <h3>100.00%</h3>
+                        <h3><?php echo "$uptime_30d%"; ?></h3>
                         <p class="muted">0 incidents</p>
                     </div>
 
                     <div>
                         <p>Last 365 days</p>
-                        <h3>100.00%</h3>
+                        <h3><?php echo "$uptime_365d%"; ?></h3>
                         <p class="muted">0 incidents</p>
                     </div>
                 </div>
