@@ -77,7 +77,7 @@
 
                                     <div>
                                         <p class="muted">' . $website_url . '</p>
-                                        <p class="muted">' . $status_code_meta . '</p>
+                                        <p class="muted">Status Code ' . $status_code_meta . '</p>
                                     </div>
                                 </a>
                             ';
