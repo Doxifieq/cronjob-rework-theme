@@ -65,7 +65,6 @@
                             $website_permalink = get_the_permalink();
                             $website_title = get_the_title();
                             $website_url = get_field('website');
-                            $website_status_code = $status_code_meta ? $status_code_meta : 'No data'; //why the FUCK is 0 equal to false
 
                             $status_code_data = mvh_get_status_code_data($status_code_meta);
 
@@ -78,7 +77,7 @@
 
                                     <div>
                                         <p class="muted">' . $website_url . '</p>
-                                        <p class="muted">' . $website_status_code . '</p>
+                                        <p class="muted">' . $status_code_meta . '</p>
                                     </div>
                                 </a>
                             ';
