@@ -126,7 +126,9 @@
                             $website_title = get_the_title();
                             $website_url = get_field('website');
 
-                            $status_code_data = mvh_get_status_code_data($status_code_meta);
+                            $is_wordpress_site = get_field('is_wordpress_site');
+
+                            $status_code_data = mvh_get_status_code_data($status_code_meta, $is_wordpress_site);
 
                             echo '
                                 <a class="active-websites-item" href="' . $website_permalink . '">

@@ -1,6 +1,6 @@
 <?php
 
-function mvh_get_status_code_data($status_code) {
+function mvh_get_status_code_data($status_code, $is_wordpress_site) {
     switch ($status_code) {
         case '200':
             return ['color' => 'green', 'status' => 'Online'];
@@ -14,6 +14,10 @@ function mvh_get_status_code_data($status_code) {
         case '503':
         case '504':
             return ['color' => 'red', 'status' => 'Offline'];
+
+        case '555':
+            if ($is_wordpress_site) return ['color' => 'green', 'status' => 'Online'];
+            return ['color' => 'yellow', 'status' => 'Unknown'];
 
         case NULL:
             return ['color' => 'yellow', 'status' => 'Unknown'];
