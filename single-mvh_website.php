@@ -51,7 +51,7 @@
                                         </div>
 
                                         <div>
-                                            <p class="muted">Status Code 0</p>
+                                            <p class="muted">Status Code ' . $status_code . '</p>
                                         </div>
                                     </div>
                                 ';
