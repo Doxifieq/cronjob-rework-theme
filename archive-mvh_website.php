@@ -23,13 +23,13 @@
             $post_meta = get_post_meta(get_the_ID());
 
             foreach ($post_meta as $key => $value) {
-                if ($key == 'status_code') {
-                    $status_code_data = mvh_get_status_code_data($value[0]);
+                $status_code_data = mvh_get_status_code_data($value[0]);
 
-                    if ($status_code_data['status'] == 'Offline') {
-                        $incident = get_the_title();
-                        $active_incidents++;
-                    }
+                if ($status_code_data['status'] != 'Offline') continue;
+
+                if ($key == 'status_code') {
+                    $incident = get_the_title();
+                    $active_incidents++;
 
                 } elseif (str_contains($key, 'status_code_')) {
                     $time = substr($key, 12);
