@@ -39,13 +39,15 @@
                                 if (!str_contains($key, 'status_code_')) continue;
 
                                 $date = date('Y-m-d H:i:s', substr($key, 12));
-                                $status = $value[0];
+                                $status_code = $value[0];
 
+                                $status_code_data = mvh_get_status_code_data($status_code);
+                                
                                 echo '
                                     <div class="history-item">
                                         <div>
                                             <h3>' . $date . '</h3>
-                                            <p>Went ' . $status . '</p>
+                                            <p><span class="dot ' . $status_code_data['color'] . '"></span>' . $status_code_data['status'] . '</p>
                                         </div>
 
                                         <div>
