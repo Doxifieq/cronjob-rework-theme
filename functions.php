@@ -19,9 +19,6 @@ function mvh_get_status_code_data($status_code, $is_wordpress_site) {
             if ($is_wordpress_site) return ['color' => 'green', 'status' => 'Online'];
             return ['color' => 'yellow', 'status' => 'Unknown'];
 
-        case NULL:
-            return ['color' => 'yellow', 'status' => 'Unknown'];
-
         default:
             return ['color' => 'yellow', 'status' => 'Unknown'];
     }
