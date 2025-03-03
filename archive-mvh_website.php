@@ -4,7 +4,7 @@
     $incident = NULL;
 
     $uptime_24h_count = 0;
-    $uptime_24h = 100; //1440
+    $uptime_24h = 100;
 
     $uptime_7d_count = 0;
     $uptime_7d = 100;
@@ -50,6 +50,8 @@
         7d = 10080
         30d = 43200
         365d = 525600
+
+        in minutes
     */
 
     $uptime_24h -= round(($uptime_24h_count * 5) / 1440 * 100, 6);
